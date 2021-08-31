@@ -1,0 +1,33 @@
+version: '3.1'
+
+services:
+  benchmark_main:
+    image: benchmark_main:latest
+    restart: always
+    volumes:
+      - mysqldata:/var/lib/mysql
+      - pgdata:/var/lib/postgresql/12/main
+    environment:
+      MYSQL_ROOT_PASSWORD: 'edward'
+      POSTGRES_USER: 'edward'
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - 3307:3306
+      - 5432:5432
+
+volumes:
+  pgdata:
+    name: pgdata
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: C:\projects\benchmarkdb\docker\volumes\pgdata
+  mysqldata:
+    name: mysqldata
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: C:\projects\benchmarkdb\docker\volumes\mysqldata
+
