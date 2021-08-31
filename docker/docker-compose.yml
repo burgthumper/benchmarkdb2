@@ -22,12 +22,12 @@ volumes:
     driver_opts:
       type: none
       o: bind
-      device: C:\projects\benchmarkdb\docker\volumes\pgdata
+      device: C:\projects\benchmarkdb2\docker\volumes\pgdata
   mysqldata:
     name: mysqldata
     driver: local
     driver_opts:
       type: none
       o: bind
-      device: C:\projects\benchmarkdb\docker\volumes\mysqldata
+      device: C:\projects\benchmarkdb2\docker\volumes\mysqldata
 
