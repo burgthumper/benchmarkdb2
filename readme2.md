@@ -31,8 +31,8 @@ Pull: `git pull`
 
 Comit instructions:
 
-add: `sudo git add *`
+add: `sudo git add .`
 
 commit: `sudo git commit -a -m 'message'`
 
-push: `sudo git push origin development`
+push: `sudo git push origin master`
